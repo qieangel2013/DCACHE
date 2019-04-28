@@ -81,8 +81,7 @@ class dispatchServer
             $server->tick(10000,function($id) use ($redis,$cache_table,$server,$obj){  
                 if($redis->lSize($cache_table)>0){ //查询监控队列是否有元素
                     try {
-                        //$yacKey = $redis->lPop($cache_table);
-                        $yacKey = "common:models:Project:Y_getProjectModelKey";
+                        $yacKey = $redis->lPop($cache_table);
                         $worker_id = 1 - $server->worker_id;
                         $server->sendMessage($yacKey,$worker_id);
                     } catch (Exception $e) {
