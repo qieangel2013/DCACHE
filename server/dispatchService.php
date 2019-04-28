@@ -53,7 +53,7 @@ class dispatchServer
 
         //创建日志服务
        	$this->ServiceLog = [
-				'path' => $config['serverConfig']['serverLog'] ?? __DIR__ .'/log/'.date('Ymd',time()).'/'.date('Ymd',time()).'.log', 
+				'path' => !empty($config['serverConfig']['serverLog']) ?: __DIR__ .'/log/'.date('Ymd',time()).'/'.date('Ymd',time()).'.log', 
 				'content' => "时间：".date('Ymd-H:i:s',time())."\r\n"
 		];
 
