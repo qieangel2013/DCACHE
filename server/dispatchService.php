@@ -19,7 +19,7 @@ class dispatchServer
     $this->Sconfig = $config;
 		$this->application->set(array(
 					'worker_num'  => 4,
-          'daemonize' => false,
+          'daemonize' => true,
 					'open_length_check' => true,
 					'dispatch_mode' => 2,
     				'package_max_length' => 2000000,
