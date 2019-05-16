@@ -1,7 +1,3 @@
-// Copyright 2012 Junqing Tan <ivan@mysqlab.net> and The Go Authors
-// Use of this source code is governed by a BSD-style
-// Part of source code is from Go fcgi package
-
 package fcgiclient
 
 import (
